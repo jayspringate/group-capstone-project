@@ -1,5 +1,5 @@
-var gameData = {
-  "data": [{
+var gameData = [
+  {
     "result": ["Under: 176", "Cover: +9"],
     "score": [80, 96],
     "teams": ["LAL", "NO"],
@@ -5432,5 +5432,5 @@ var gameData = {
     "logo": ["Cover: +13", "Under: 192"],
     "odds/_source": ["-5", "204.5"],
 
-  }]
-}
+  }
+];
