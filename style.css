@@ -7,3 +7,19 @@ body {
 	margin: 0;
 
 }
+.header {
+	font-family: 'Yesteryear';
+	font-size: 75px;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 40px;
+}
+nav {
+	display:-webkit-inline-box;
+}
+.homeTeam {
+	padding: 0 10px 0 310px;
+}
+.dropDown {
+	padding: 0 10px;
+}
