@@ -6,11 +6,127 @@
         <title>OUR WEBSITE NAME GOES HERE!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="reset.css">
+        <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+        <header class="header">
+            Bottom Dollar Bets
+        </header>
+        <nav class="navBar">
+            <form class="homeTeam">
+                <select name="homeTeam">
+                    <option value="blank" selected="selected">Select Team</option>
+                    <option value="LA Lakers">LA Lakers</option>
+                    <option value="Miami Heat">Miami Heat</option>
+                    <option value="Cleveland Cavaliers">Cleveland Cavs</option>
+                    <option value="Chicago Bulls">Chicago Bulls</option>
+                    <option value="NY Knicks">NY Knicks</option>  
+                    <option value="San Antonio Spurs">SA Spurs</option> 
+                    <option value="Toronto Raptors">Toronto Raptors</option>
+                    <option value="Boston Celtics">Boston Celtics</option>
+                    <option value="NO Pelicans">N.O. Pelicans</option>
+                    <option value="Dallas Mavericks">Dallas Mavs</option>
+                    <option value="Golden State Warriors">Golden State Warriors</option>
+                    <option value="OKC Thunder">OKC Thunder</option>
+                    <option value="Houston Rockets">Houston Rockets</option>
+                    <option value="LA Clippers">LA Clippers</option>
+                    <option value="Brooklyn Nets">Brooklyn Nets</option>
+                    <option value="Phoenix Suns">Phoenix Suns</option>
+                    <option value="Charlotte Hornets">Charlotte Hornets</option>
+                    <option value="Philadelphia 76ers">Philly 76ers</option>
+                    <option value="Sacremento Kings">Sacremento Kings</option>
+                    <option value="Portland Blazers">Portland Blazers</option>
+                    <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+                    <option value="Washington Wizards">Washington Wizards</option>
+                    <option value="Indiana Pacers">Indiana Pacers</option>
+                    <option value="Atlanta Hawks">Atlanta Hawks</option>
+                    <option value="Memphis Grizzlies">Memphis Grizzlies</option>
+                    <option value="Milwaukee Bucks">Milwaukee Bucks</option>
+                    <option value="Denver Nuggets">Denver Nuggets</option>
+                    <option value="Orlando Magic">Orlando Magic</option>
+                    <option value="Detroit Pistons">Detroit Pistons</option>
+                    <option value="Utah Jazz">Utah Jazz</option>
+                </select>           
+            </form>
+            <form class="homeRoad dropDown">
+                <select name="homeAndRoad">
+                    <option value="blankHomeRoad" selected="selected">Choose</option>  
+                    <option value="Home">Home</option>
+                    <option value="Road">Road</option>
+                </select>
+            </form>    
+            <form class="favUnder dropDown">
+                <select name="favUnder">
+                    <option value="favUnder">Choose</option>
+                    <option value="Favored">Favored</option>
+                    <option value="Underdog">Underdog</option>
+                </select>
+            </form>
+            <form class="spread dropDown">
+                <select name="spread">
+                    <option value="spread" selected="selected">Select Spread</option>
+                    <option value="0">Zero</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                    <option value="6">Six</option>
+                    <option value="7">Seven</option>
+                    <option value="8">Eight</option>
+                    <option value="9">Nine</option>
+                    <option value="10">Ten</option>
+                    <option value="11">Eleven</option>
+                    <option value="12">Twelve</option>
+                    <option value="13">Thirteen</option>
+                    <option value="14">Fourteen</option>
+                    <option vale="15">Fifteen</option>
+                    <option value="16">Sixteen</option>
+                    <option value="17">Seventeen</option>
+                    <option value="18">Eighteen</option>
+                    <option value="19">Nineteen</option>
+                    <option value="20">Twenty</option>
+                </select>
+            </form>
+            <form class="roadTeam dropDown">
+                <select name="roadTeam">
+                    <option value="blank" selected="selected">Select Opponent</option>
+                    <option value="LA Lakers">LA Lakers</option>
+                    <option value="Miami Heat">Miami Heat</option>
+                    <option value="Cleveland Cavaliers">Cleveland Cavs</option>
+                    <option value="Chicago Bulls">Chicago Bulls</option>
+                    <option value="NY Knicks">NY Knicks</option>  
+                    <option value="San Antonio Spurs">SA Spurs</option> 
+                    <option value="Toronto Raptors">Toronto Raptors</option>
+                    <option value="Boston Celtics">Boston Celtics</option>
+                    <option value="NO Pelicans">N.O. Pelicans</option>
+                    <option value="Dallas Mavericks">Dallas Mavs</option>
+                    <option value="Golden State Warriors">Golden State Warriors</option>
+                    <option value="OKC Thunder">OKC Thunder</option>
+                    <option value="Houston Rockets">Houston Rockets</option>
+                    <option value="LA Clippers">LA Clippers</option>
+                    <option value="Brooklyn Nets">Brooklyn Nets</option>
+                    <option value="Phoenix Suns">Phoenix Suns</option>
+                    <option value="Charlotte Hornets">Charlotte Hornets</option>
+                    <option value="Philadelphia 76ers">Philly 76ers</option>
+                    <option value="Sacremento Kings">Sacremento Kings</option>
+                    <option value="Portland Blazers">Portland Blazers</option>
+                    <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+                    <option value="Washington Wizards">Washington Wizards</option>
+                    <option value="Indiana Pacers">Indiana Pacers</option>
+                    <option value="Atlanta Hawks">Atlanta Hawks</option>
+                    <option value="Memphis Grizzlies">Memphis Grizzlies</option>
+                    <option value="Milwaukee Bucks">Milwaukee Bucks</option>
+                    <option value="Denver Nuggets">Denver Nuggets</option>
+                    <option value="Orlando Magic">Orlando Magic</option>
+                    <option value="Detroit Pistons">Detroit Pistons</option>
+                    <option value="Utah Jazz">Utah Jazz</option>
+                </select>           
+            </form>
+        </nav>
 
 
 
