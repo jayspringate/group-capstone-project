@@ -10,7 +10,7 @@ function oddsAdjust() {
 			gameData[i].odds.splice(0,0,-(gameData[i].odds[0]));
 		}
 }
-};
+}
 
 oddsAdjust();
 // console.log(gameData[0].odds);
@@ -24,7 +24,7 @@ function favoriteAdjust () {
 			gameData[i].favorite = ["underdog","favorite"];
 		}
 		}
-};
+}
 
 favoriteAdjust();
 
@@ -32,7 +32,7 @@ function courtAdjust () {
 	for (i=0; i < gameData.length; i++) {
 			gameData[i].court = ["road","home"];
 		}
-};
+}
 
 courtAdjust();
 
@@ -45,8 +45,8 @@ function spreadGrab() {
 	var pushCount = 0;
 for (i=0; i < gameData.length; i++) {
 	if (
-		gameData[i].teams[0] == "CLE" 
-		&& 
+		gameData[i].teams[0] == "CLE"
+		&&
 		// gameData[i].favorite[0] == "favorite"
 		// &&
 		// gameData[i].court[0] == "home"
@@ -82,28 +82,28 @@ for (i=0; i < gameData.length; i++) {
 	}
 }
 console.log(winCount + " - " + lossCount + " - " + pushCount);
-};
+}
 spreadGrab();
 
-// function totalGrab(team, location, favOrDog, spread, opponent) {
-// 	var overCount = 0;
-// 	var underCount = 0;
-// 	var pushTotalCount = 0;
-// 	var totalScore = 0;
-// 	for (i=0; i < gameData.length; i++) {
-// 	if (gameData[i].teams[0] == team || gameData[i].teams[1] == team) {
-// 		totalScore = gameData[i].score[0] + gameData[i].score[1];
-// 		if (totalScore < gameData[i].odds[2]) {
-// 			underCount++;
-// 		} else if (totalScore > gameData[i].odds[2]) {
-// 			overCount++;
-// 			} else {
-// 				pushTotalCount++;
-// 			}
-// 		}
-// 	}
-// 	console.log(overCount + " - " + underCount + " - " + pushTotalCount);
-// };
-// totalGrab("SA");
+function totalGrab(team, location, favOrDog, spread, opponent) {
+	var overCount = 0;
+	var underCount = 0;
+	var pushTotalCount = 0;
+	var totalScore = 0;
+	for (i=0; i < gameData.length; i++) {
+	if (gameData[i].teams[0] == team || gameData[i].teams[1] == team) {
+		totalScore = gameData[i].score[0] + gameData[i].score[1];
+		if (totalScore < gameData[i].odds[2]) {
+			underCount++;
+		} else if (totalScore > gameData[i].odds[2]) {
+			overCount++;
+			} else {
+				pushTotalCount++;
+			}
+		}
+	}
+	console.log(overCount + " - " + underCount + " - " + pushTotalCount);
+}
+totalGrab("SA");
 		
 
