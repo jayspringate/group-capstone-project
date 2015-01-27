@@ -536,7 +536,7 @@ var gameData = [
   }, {
     "result": ["Under: 187", "Cover: +21"],
     "score": [76, 111],
-    "teams": ["PHI", "WAS"],
+    "teams": ["PHI", "`"],
     "odds": [192.5, -14],
     "score/_source": ["76", "111"],
     "logo": ["Under: 187", "Cover: +21"],
