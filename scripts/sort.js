@@ -1,4 +1,4 @@
-function dataAdjust() {
+function oddsAdjust() {
 	for (i=0; i < gameData.length; i++) {
 		if (gameData[i].odds[0] < 100) {
 			gameData[i].odds.splice(1,0,-(gameData[i].odds[0]));
@@ -12,15 +12,48 @@ function dataAdjust() {
 }
 };
 
-dataAdjust();
+oddsAdjust();
+// console.log(gameData[0].odds);
+// console.log(gameData[1].odds);
 
+function favoriteAdjust () {
+	for (i=0; i < gameData.length; i++) {
+		if (gameData[i].odds[0] < 0) {
+			gameData[i].favorite = ["favorite","underdog"];
+		} else {
+			gameData[i].favorite = ["underdog","favorite"];
+		}
+		}
+};
+
+favoriteAdjust();
+
+function courtAdjust () {
+	for (i=0; i < gameData.length; i++) {
+			gameData[i].court = ["road","home"];
+		}
+};
+
+courtAdjust();
+
+console.log(gameData[0]);
+console.log(gameData[1]);
 
 function spreadGrab() {
 	var winCount = 0;
 	var lossCount = 0;
 	var pushCount = 0;
 for (i=0; i < gameData.length; i++) {
-	if (gameData[i].teams[0] == "ATL") {
+	if (
+		gameData[i].teams[0] == "CLE" 
+		&& 
+		// gameData[i].favorite[0] == "favorite"
+		// &&
+		// gameData[i].court[0] == "home"
+		// &&
+		// gameData[i].odds[0] == 4
+		// &&
+		gameData[i].teams[1] == "ATL") {
 		if ((gameData[i].score[0] + gameData[i].odds[0]) < gameData[i].score[1]) {
 			lossCount++;
 		} else if ((gameData[i].score[0] + gameData[i].odds[0]) > gameData[i].score[1]) {
@@ -29,7 +62,16 @@ for (i=0; i < gameData.length; i++) {
 			pushCount++;
 		}
 	}
-	if (gameData[i].teams[1] == "ATL") {
+	if (
+		gameData[i].teams[1] == "CLE" 
+		&&
+		// gameData[i].favorite[1] == "favorite"
+		// &&
+		// gameData[i].court[1] == "home"
+		// &&
+		// gameData[i].odds[1] == 4
+		// &&
+		gameData[i].teams[0] == "ATL") {
 		if ((gameData[i].score[1] + gameData[i].odds[1]) < gameData[i].score[0]) {
 			lossCount++;
 		} else if ((gameData[i].score[1] + gameData[i].odds[1]) > gameData[i].score[0]) {
@@ -41,7 +83,7 @@ for (i=0; i < gameData.length; i++) {
 }
 console.log(winCount + " - " + lossCount + " - " + pushCount);
 };
-oddsGrab();
+spreadGrab();
 
 // function totalGrab(team, location, favOrDog, spread, opponent) {
 // 	var overCount = 0;
