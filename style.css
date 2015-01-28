@@ -11,15 +11,25 @@ body {
 	font-family: 'Yesteryear';
 	font-size: 75px;
 	text-align: center;
-	padding-top: 15px;
-	padding-bottom: 40px;
+	padding:15px 0;
+	width: 430px;
+	margin: auto;
+	border:#87adde;
+	border-style:ridge;
 }
 nav {
 	display:-webkit-inline-box;
+}
+.navBar {
+	padding:25px 0;
 }
 .homeTeam {
 	padding: 0 10px 0 310px;
 }
 .dropDown {
 	padding: 0 10px;
+}
+button {
+	display: list-item;
+	margin:auto;
 }
