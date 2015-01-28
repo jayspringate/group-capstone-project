@@ -6,10 +6,10 @@
   <title>Bottom Dollar Bets | Vegas Odds You Can Bet Your Bottom Dollar On</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="style.css">
-  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../scripts/jquery.js"></script>
 </head>
 <body>
   <header class="header">
@@ -19,26 +19,26 @@
     <form class="homeTeam">
       <select name="homeTeam" id="team">
         <option value="blank" selected="selected">Select Team</option>
-        <option value="LAL">LA Lakers</option>
+        <option value="LAL">Los Angeles Lakers</option>
         <option value="MIA">Miami Heat</option>
-        <option value="CLE">Cleveland Cavs</option>
+        <option value="CLE">Cleveland Cavaliers</option>
         <option value="CHI">Chicago Bulls</option>
-        <option value="NY">NY Knicks</option>  
-        <option value="SA">SA Spurs</option> 
+        <option value="NY">New York Knicks</option>  
+        <option value="SA">San Antonio Spurs</option> 
         <option value="TOR">Toronto Raptors</option>
         <option value="BOS">Boston Celtics</option>
-        <option value="NO">N.O. Pelicans</option>
-        <option value="DAL">Dallas Mavs</option>
+        <option value="NO">New Orleans Pelicans</option>
+        <option value="DAL">Dallas Mavericks</option>
         <option value="GS">Golden State Warriors</option>
-        <option value="OKC">OKC Thunder</option>
+        <option value="OKC">Oklahoma City Thunder</option>
         <option value="HOU">Houston Rockets</option>
-        <option value="LAC">LA Clippers</option>
+        <option value="LAC">Los Angeles Clippers</option>
         <option value="BK">Brooklyn Nets</option>
         <option value="PHO">Phoenix Suns</option>
         <option value="CHAR">Charlotte Hornets</option>
-        <option value="PHI">Philly 76ers</option>
-        <option value="SAC">Sacremento Kings</option>
-        <option value="POR">Portland Blazers</option>
+        <option value="PHI">Philadelphia 76ers</option>
+        <option value="SAC">Sacramento Kings</option>
+        <option value="POR">Portland Trail Blazers</option>
         <option value="MIN">Minnesota Timberwolves</option>
         <option value="WAS">Washington Wizards</option>
         <option value="IND">Indiana Pacers</option>
@@ -52,28 +52,28 @@
       </select>           
     </form>
      <form class="roadTeam dropDown">
-      <select name="roadTeam" id="opponent">
+      <select name="roadTeam" value="blank" id="opponent">
         <option value="blank" selected="selected">Select Opponent</option>
-        <option value="LAL">LA Lakers</option>
+        <option value="LAL">Los Angeles Lakers</option>
         <option value="MIA">Miami Heat</option>
-        <option value="CLE">Cleveland Cavs</option>
+        <option value="CLE">Cleveland Cavaliers</option>
         <option value="CHI">Chicago Bulls</option>
-        <option value="NY">NY Knicks</option>  
-        <option value="SA">SA Spurs</option> 
+        <option value="NY">New York Knicks</option>  
+        <option value="SA">San Antonio Spurs</option> 
         <option value="TOR">Toronto Raptors</option>
         <option value="BOS">Boston Celtics</option>
-        <option value="NO">N.O. Pelicans</option>
-        <option value="DAL">Dallas Mavs</option>
+        <option value="NO">New Orleans Pelicans</option>
+        <option value="DAL">Dallas Mavericks</option>
         <option value="GS">Golden State Warriors</option>
-        <option value="OKC">OKC Thunder</option>
+        <option value="OKC">Oklahoma City Thunder</option>
         <option value="HOU">Houston Rockets</option>
-        <option value="LAC">LA Clippers</option>
+        <option value="LAC">Los Angeles Clippers</option>
         <option value="BK">Brooklyn Nets</option>
         <option value="PHO">Phoenix Suns</option>
         <option value="CHAR">Charlotte Hornets</option>
-        <option value="PHI">Philly 76ers</option>
-        <option value="SAC">Sacremento Kings</option>
-        <option value="POR">Portland Blazers</option>
+        <option value="PHI">Philadelphia 76ers</option>
+        <option value="SAC">Sacramento Kings</option>
+        <option value="POR">Portland Trail Blazers</option>
         <option value="MIN">Minnesota Timberwolves</option>
         <option value="WAS">Washington Wizards</option>
         <option value="IND">Indiana Pacers</option>
@@ -88,21 +88,21 @@
     </form>
     <form class="homeRoad dropDown">
       <select name="homeAndRoad" id="court">
-        <option value="blankHomeRoad" selected="selected">Choose</option>  
+        <option value="blank" selected="selected">Choose</option>  
         <option value="Home">Home</option>
         <option value="Road">Road</option>
       </select>
     </form>    
     <form class="favUnder dropDown">
       <select name="favUnder" id="favorite">
-        <option value="favUnder">Choose</option>
+        <option value="blank">Choose</option>
         <option value="Favored">Favored</option>
         <option value="Underdog">Underdog</option>
       </select>
     </form>
     <form class="spread dropDown">
      <select name="spread" id="spread">          
-      <option value="spread" selected="selected">Select Spread</option>
+      <option value="blank" selected="selected">Select Spread</option>
       <option value="0">Zero</option>
       <option value="1">One</option>
       <option value="2">Two</option>
@@ -130,8 +130,9 @@
   
   <button id='testClick'>Get Results</button>
 
-<script src="scripts/gameData.js"></script>
-<script src="scripts/sort.js"></script>
+<script src="../scripts/gameData.js"></script>
+<script src="../scripts/dataAdjust.js"></script>
+<script src="../scripts/sort.js"></script>
 
 
 </body>

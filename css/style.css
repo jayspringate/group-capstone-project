@@ -19,6 +19,7 @@ body {
 }
 nav {
 	display:-webkit-inline-box;
+	display:-moz-inline-box;
 }
 .navBar {
 	padding:25px 0;
