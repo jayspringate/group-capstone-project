@@ -1,14 +1,14 @@
 function teamAssign() {
 	for(i=0; i < 619; i++) {
 		gameData[i].team = gameData[i].teams[0];
-	}	
-};
+	}
+}
 
-function teamAssign2 () {	
+function teamAssign2 () {
 	for(i=619; i < 1238; i++) {
 	gameData[i].team = gameData[i].teams[1];
-	}	
-};
+	}
+}
 
 teamAssign();
 teamAssign2();
@@ -16,14 +16,14 @@ teamAssign2();
 function opponentAssign() {
 	for(i=0; i < 619; i++) {
 		gameData[i].opponent = gameData[i].teams[1];
-	}	
-};
+	}
+}
 
-function opponentAssign2 () {	
+function opponentAssign2 () {
 	for(i=619; i < 1238; i++) {
 	gameData[i].opponent = gameData[i].teams[0];
-	}	
-};
+	}
+}
 
 opponentAssign();
 opponentAssign2();
@@ -47,14 +47,14 @@ oddsAdjust();
 function spreadAssign() {
 	for(i=0; i < 619; i++) {
 		gameData[i].spread = gameData[i].odds[0];
-	}	
-};
+	}
+}
 
-function spreadAssign2() {	
+function spreadAssign2() {
 	for(i=619; i < 1238; i++) {
 	gameData[i].spread = gameData[i].odds[1];
-	}	
-};
+	}
+}
 
 spreadAssign();
 spreadAssign2();
@@ -74,14 +74,14 @@ favoriteAssign();
 function courtAssign() {
 	for(i=0; i < 619; i++) {
 		gameData[i].court = "road";
-	}	
-};
+	}
+}
 
-function courtAssign2() {	
+function courtAssign2() {
 	for(i=619; i < 1238; i++) {
 		gameData[i].court = "home";
-	}	
-};
+	}
+}
 
 courtAssign();
 courtAssign2();
@@ -95,8 +95,8 @@ function gradeAssign() {
 		} else {
 			gameData[i].grade = "push";
 		}
-	}	
-};
+	}
+}
 
 function gradeAssign2() {
 	for(i=619; i < 1238; i++) {
@@ -107,8 +107,8 @@ function gradeAssign2() {
 		} else {
 			gameData[i].grade = "push";
 		}
-	}	
-};
+	}
+}
 
 gradeAssign();
 gradeAssign2();
@@ -123,6 +123,6 @@ function totalGradeAssign() {
 			gameData[i].totalGrade = "push";
 		}
 	}
-};
+}
 
 totalGradeAssign();

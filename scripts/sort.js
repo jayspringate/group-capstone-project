@@ -12,11 +12,9 @@ $(function () {
 		var underCount = 0;
 		var pushTotalCount = 0;
 
-	$(".selected").removeClass("selected");
-	
-	console.log($(".selected"));
+		$(".selected").removeClass("selected");
 
-	$("select").filter(function(index) {
+		$("select").filter(function(index) {
 			return $($("select")[index]).val()!="blank";
 		}).addClass("selected");
 
@@ -30,46 +28,68 @@ $(function () {
 		console.log(property, selection);
 
 		for (i=0; i < property.length; i++) {
-	function gameFilter(element) {
-			if (element[property[i]] == selection[i]) {
-			return element;
+			function gameFilter(element) {
+				if (element[property[i]] == selection[i]) {
+				return element;
+				}
+			}
+		filteredGames = filteredGames.filter(gameFilter);
 		}
-}
-	filteredGames = filteredGames.filter(gameFilter);
-}
-	console.log(filteredGames);
+		console.log(filteredGames);
 
-	function gradeCount() {
-		for (i=0; i < filteredGames.length; i++) {
-			if (filteredGames[i].grade == "win") {
-				winCount++;
-			} else if (filteredGames[i].grade == "loss") {
-				lossCount++;
-			} else {
-				pushCount++;
+		function gradeCount() {
+			for (i=0; i < filteredGames.length; i++) {
+				if (filteredGames[i].grade == "win") {
+					winCount++;
+				} else if (filteredGames[i].grade == "loss") {
+					lossCount++;
+				} else {
+					pushCount++;
+				}
+			}		
+		};
+
+		gradeCount();
+	
+		console.log(winCount + " - " + lossCount + " - " + pushCount);
+
+		function totalGradeCount() {
+			for (i=0; i < filteredGames.length; i++) {
+				if (filteredGames[i].totalGrade == "over") {
+					overCount++;
+				} else if (filteredGames[i].totalGrade == "under") {
+					underCount++;
+				} else {
+					pushTotalCount++;
+				}
 			}
 		}
-		
-	};
-	gradeCount();
-	console.log(winCount + " - " + lossCount + " - " + pushCount);
 
-	function totalGradeCount() {
-		for (i=0; i < filteredGames.length; i++) {
-			if (filteredGames[i].totalGrade == "over") {
-				overCount++;
-			} else if (filteredGames[i].totalGrade == "under") {
-				underCount++;
-			} else {
-				pushTotalCount++;
+		totalGradeCount();
+		console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " + "Push:" + " " + pushCount);
+
+		$table = $('#resultTable');
+		$table += "<tr>";
+		$table += "<td>" + " Win 		Count: " + winCount 	+ " "	+ "</td>";
+		$table += "<td>" + " Loss 	Count: " + lossCount 	+ " "	+ "</td>";
+		$table += "<td>" + " Over 	Count: " + overCount 	+ " " + "</td>";
+		$table += "<td>" + " Under	Count: " + underCount + " " + "</td>";
+		$table += "<td>" + " Push 	Count: " + pushCount 	+ " " + "</td>";
+		$table += "</tr>";
+
+		var tableHeader = function () {
+			var $tableHead;
+			if ($('.selected').val() != "blank") {
+				$tableHead = $('.selected').val();
+		  	$('#tableInfo').text($tableHead);
+		  	console.log($tableHead);
 			}
-		}
-	};
-
-totalGradeCount();
-console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " + "Push:" + " " + pushCount);
+		};
+		tableHeader();
+		$('body').append($table);
+	});
+        
 
 });
-	});
 								
 		
