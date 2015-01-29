@@ -1,14 +1,42 @@
 $(function () {
+		
+	$('#testClick').on('click', function () {
+		var property = [];
+		var selection = [];
+		var element;
+		var filteredGames = gameData;
+		
+	$(".selected").removeClass("selected");
+	
+	console.log($(".selected"));
 
 	$("select").filter(function(index) {
 			return $($("select")[index]).val()!="blank";
-		}).addClass("selected")
-	$(".selected").each(function(index) {
-		 
+		}).addClass("selected");
+
+		$(".selected").each(function(index) {
+			property[index] = $(this).attr('id');
+			selection[index] = $(this).val();
+		});
+
+		console.log($(".selected"));
+
+		console.log(property, selection);
+
+		for (i=0; i < property.length; i++) {
+	function gameFilter(element) {
+			if (element[property[i]] == selection[i]) {
+return element;
 	}
+}
+filteredGames = filteredGames.filter(gameFilter);
+}
+console.log(filteredGames);
 });
-
-
+	});
+								
+		
+// 
 
 // 			if ((filteredGames[i].score[0] + filteredGames[i].odds[0]) < filteredGames[i].score[1]) {
 // 				lossCount++;
