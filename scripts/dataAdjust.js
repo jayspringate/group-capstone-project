@@ -85,3 +85,44 @@ function courtAssign2() {
 
 courtAssign();
 courtAssign2();
+
+function gradeAssign() {
+	for(i=0; i < 619; i++) {
+		if ((gameData[i].score[0] + gameData[i].spread) < gameData[i].score[1]) {
+			gameData[i].grade = "loss";
+		} else if ((gameData[i].score[0] + gameData[i].spread) > gameData[i].score[1]) {
+			gameData[i].grade = "win";
+		} else {
+			gameData[i].grade = "push";
+		}
+	}	
+};
+
+function gradeAssign2() {
+	for(i=619; i < 1238; i++) {
+		if ((gameData[i].score[1] + gameData[i].spread) < gameData[i].score[0]) {
+			gameData[i].grade = "loss";
+		} else if ((gameData[i].score[1] + gameData[i].spread) > gameData[i].score[0]) {
+			gameData[i].grade = "win";
+		} else {
+			gameData[i].grade = "push";
+		}
+	}	
+};
+
+gradeAssign();
+gradeAssign2();
+
+function totalGradeAssign() {
+	for(i=0; i < gameData.length; i++) {
+		if ((gameData[i].score[0] + gameData[i].score[1]) < gameData[i].odds[2]) {
+			gameData[i].totalGrade = "under";
+		} else if ((gameData[i].score[0] + gameData[i].score[1]) > gameData[i].odds[2]) {
+			gameData[i].totalGrade = "over";
+		} else {
+			gameData[i].totalGrade = "push";
+		}
+	}
+};
+
+totalGradeAssign();
